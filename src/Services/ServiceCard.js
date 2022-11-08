@@ -1,0 +1,29 @@
+import React from 'react';
+import { Link } from 'react-router-dom';
+
+const ServiceCard = ({service}) => {
+    const {_id, image_url, price, title} = service;
+    // console.log(img, price , title);
+    return (
+        <div className="card w-96 bg-base-100 shadow-xl">
+            <figure><img src={image_url} alt="" /></figure>
+            <div className="card-body">
+                <h2 className="card-title">
+                    {title}
+                    <div className="badge badge-secondary">NEW</div>
+                </h2>
+                <p className='2xl text-red-500 font-semibold'>$ {price}</p>
+                <div className="card-actions justify-end">
+                    <Link to={`/checkout/${_id}`}>
+
+                      <div className="badge badge-outline">details view</div>
+                    </Link>
+                    
+                    {/* <div className="badge badge-outline">Products</div> */}
+                </div>
+            </div>
+        </div>
+    );
+};
+
+export default ServiceCard;

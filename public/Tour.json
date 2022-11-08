@@ -1,0 +1,50 @@
+[
+    {
+        "category_id": "01",
+        "title": "Sundarbans: The Largest Mangrove Forest of The Earth",
+        "price": "200.00",
+        "image_url": "https://media.istockphoto.com/id/1045841548/photo/tiger-drinking-water-from-river.jpg?s=612x612&w=0&k=20&c=zJYtsbUA_fA5DY0IBLSnEXh1-7VaqkcJ05l0WqaePdo=",
+        "description": "Forest is the lung of the Mother Earth. Without forest it’s impossible to live in the world. That’s mean no forest no life. The word “forest” comes from old French word forest (also fores). And the Bans word derives from the English Word Forest.first known forests on Earth arose in the Late Devonian (approximately 380 million years ago), with the evolution of Archaeopteryx.A mangrove is a shrub or small tree that grows in coastal saline or brackish water. The term is also used for tropical coastal vegetation consisting of such species. Mangroves occur worldwide in the tropics and subtropics, mainly between latitudes 25° N and 25° S. The total mangrove forest area of the world in 2000 was 137,800 square kilometers (53,200 sq mi), spanning 118 countries and territories. "
+
+    },
+    {
+        "category_id": "02",
+        "title": "Sajek Valley",
+        "price": "5000.00",
+        "image_url": "https://thumbs.dreamstime.com/b/sajek-valley-tremendous-view-84919512.jpg",
+        "description": "Sajek Tripuri Valley is one of the most popular tourist spots in Bangladesh situated among the hills of the Kasalong range of mountains in Sajek union, Baghaichhari Upazila in Rangamati District.[3] The valley is 2,000 feet (610 m) above sea level.[4] Sajek Tripuri Valley is known as the Queen of Hills & Roof of Rangamati."
+
+    },
+    {
+        "category_id": "03",
+        "title": "Cox'S Bazer",
+        "price": "200.00",
+        "image_url": "https://media.istockphoto.com/id/1387459490/photo/the-fishing-boat-on-beach-at-sunset-moment-coxs-bazar-bangladesh.jpg?b=1&s=170667a&w=0&k=20&c=LsjnwAq3yqKvAqAw7XDoe8mJPOGoyjDO50xuRdjdvbE=",
+        "description": "Cox's Bazar is consists of miles of golden sands, towering cliffs, surfing waves, rare conch shells, colourful pagodas, Buddhist temples and tribes. The most attractive tourist Resort full of bounties of nature in Bangladesh. Having the world's longest unbroken 120 k.m beach slopping gently down to the blue waters of the Bay of Bengal against the picturesque background of a chain of hills covered with deep green forests, Cox's Bazar is one of the most attractive tourist spots in the world. Cox’s Bazar sea beach Attractions of the long sea-beach include the silvery waves of the sea breaking at the foot of hills at the hight tides, sea bathing, a trip along the beach by jeep, the view of the setting sun in the rolling sea-waves, the moonlit night, the exciting interior of the Bazar and its people. The romantic call of the daring sampans (boat), the waterfall, the forest, the artful Pagodas-all takes a tourist into surprise. Located at a distance of 152 km south of Chittagong one can reach this green hilly and flowery dreamland by Air, road and sea from Chittagong, and by air from Dhaka. The town is named after Lieutenant Cox, who died here in 1798 after he had established a colony of Mags, who sought shelter in British territory after the conquest of Arakan by the Burmese."
+
+    },
+    {
+        "category_id": "04",
+        "title": "Bandarbhan Tour",
+        "price": "60.00",
+        "image_url": "https://media.istockphoto.com/id/1382765015/photo/golden-temple.jpg?b=1&s=170667a&w=0&k=20&c=1v7M4Fwc25s5BpwycHgCe_JPui_uFq5hz81O52kanS4=",
+        "description": "Bandarban District (chittagong division) area 4479.03 sq km, located in between 21°11' and 22°22' north latitudes and in between 92°04' and 92°41' east longitudes. It is bounded by rangamati district on the north, Arakan (Myanmar) on the south, Chin Province (Myanmar) and Rangamati district on the east, chittagong and cox's bazar district on the west. Marmiana Tang, Bathil Tang, Kewkradang, Langfi Tang, Lakpang Tang, Thaingkiang Tang, Moudak Tang, Murangiang Tang, Rungrang Tang, Naprai Tang, Murifa Tang, Busi Tang, and Sara Tang are the notable hills of this district.' Population Total 298120; male 162133, female 135987; Muslim 147072, Hindu 10796, Buddhist 28546, Christian 103997 and others 7719. Indigenous community such as marma, chakma, bawm, Murong, Tripura, khyang, khumee, and lushei belong to this upazila Water bodies Main rivers: sangu, matamuhuri."
+       
+    },
+    {
+        "category_id": "05",
+        "title": "Sreemangal",
+        "price": "800.00",
+        "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Sreemangal_tea_garden_2017-08-20.jpg/250px-Sreemangal_tea_garden_2017-08-20.jpg",
+        "description": "Sreemangal ( romanized: Srimongol) is an upazila of Moulvibazar District[1] in the Sylhet Division of Bangladesh. It is located at the southwest of the district, and borders the Habiganj District to the west and the Indian state of Tripura to the south. Sreemangal is often referred to as the 'tea capital' of Bangladesh, and is most famous for its tea fields. Other than tea, the rubber, pineapple, wood, betel, and lemon industries also exist in the upazila.[2]"
+    
+    },
+    {
+        "category_id": "06",
+        "title": "KuaKata Beach",
+        "price": "200.00",
+        "image_url": "https://media.istockphoto.com/id/1422982868/photo/sunrise-view-point-in-kuakata.jpg?b=1&s=170667a&w=0&k=20&c=dCeleDlKUIzzDUEtT6sVZqvCAkEPpUqUDtdqPTGAiVI=",
+        "description": "It is known as  (Daughter of Sea).[5] It is one of top tourist attraction in Bangladesh but due to pollution, uncontrolled tourism and other issues Kuakata Beach is losing its beauty.[6][7]"
+     
+    }
+]
