@@ -14,7 +14,7 @@ const ReviewsRow = ({ review, handleDeleted,  handleUpdate}) => {
 
     
     return (
-            <tr>
+            <tr className=''>
                 <th>
                     <label>
                         <button onClick={ () => handleDeleted(_id)} className='btn btn-ghost'>X</button>
