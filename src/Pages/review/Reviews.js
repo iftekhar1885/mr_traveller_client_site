@@ -4,7 +4,7 @@ import ReviewsRow from './ReviewsRow';
 
 const Reviews = () => {
 
-  const { user } = useContext(AuthContext);
+  const { user, logOut } = useContext(AuthContext);
 
   const [reviews, setReviews] = useState([]);
 
@@ -15,13 +15,18 @@ const Reviews = () => {
       return;
     fetch(`http://localhost:5000/reviews?email=${user?.email}`, {
       headers: {
-        authorization: `Bearer ${localStorage.getItem('genius-token')}`
+        authorization: `Bearer ${localStorage.getItem('token')}`
       }
     })
 
-      .then(res => res.json())
+      .then(res => {
+        if(res.status === 401 || res.status === 403){
+          logOut();
+        }
+        return res.json()
+      })
       .then(data => setReviews(data))
-  }, [user?.email])
+  }, [user?.email, logOut])
 
   const handleDeleted = id => {
     const proceed = window.confirm('Are you sure , You want to sure cancel review');
