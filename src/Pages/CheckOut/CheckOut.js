@@ -37,7 +37,7 @@ const CheckOut = () => {
         .then(data => {
             console.log(data)
             if(data.acknowledged){
-                alert('order placed successfully')
+                alert('Review Added Successfully')
                 form.reset();
             }
         }
@@ -47,18 +47,27 @@ const CheckOut = () => {
      return (
         <div>
              <div>
-            <form onSubmit={handleReviewOrder}>
-                <h2 className='text-4xl m-3'>{title}</h2>
-                <h4 className='text-3xl m-3'>price:$ {price}</h4>
-                <p className='text-semibold m-5'>{description}</p>
-                <div className='grid grid-cols-1 lg:grid-cols-2 gap-4 '>
+                <h2 className='text-5xl text-bold text-center'>This Is Details Part</h2>
+              <diV className='border border-red-200 p-3 m-10 shadow-lg rounded-lg bg-yellow-500'>
+
+                 <h2 className='text-4xl m-3 text-center text-bold'>{title}</h2>
+                  <h4 className='text-2xl m-3 text-center text-bold'>price:$ {price}</h4>
+                  <p className='text-semibold m-10'>{description}</p>
+              </diV>
+              <h2 className='text-5xl text-center m-10'> Please add a Review</h2>
+                <form onSubmit={handleReviewOrder}>
+                <div className='grid grid-cols-1 lg:grid-cols-2 gap-4 m-10 shadow-lg rounded-lg p-14 mb-0 bg-violet-400'>
+                    
                 <input name='firstName' type="text" placeholder="First Name" className="input input-bordered w-full" />
                 <input name='lastName' type="text" placeholder="Last Name" className="input input-bordered w-full" />
                 <input name='phone' type="text" placeholder="Your Phone" className="input input-bordered w-full" required/>
                 <input name='email' type="text" placeholder="Your email" defaultValue={user?.email} className="input input-bordered w-full" />
+                <textarea name='message' className="textarea textarea-bordered w-full shadow-lg rounded-lg p-14  m-6" placeholder="Your message" required></textarea>
+                <br/>
+                <input className='btn m-3' type='submit' value='Please added a new review'></input>
                 </div>
-            <textarea name='message' className="textarea textarea-bordered w-full m-3" placeholder="Your message" required></textarea>
-            <input className='btn m-3' type='submit' value='Place Your Order'></input>
+            
+            
             </form>
         </div>
         </div>

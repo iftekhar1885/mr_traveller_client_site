@@ -6,7 +6,7 @@ const Reviews = () => {
 
     const {user} = useContext(AuthContext);
 
-    const [reviews, setReviews] = useState([])
+    const [reviews, setReviews] = useState([]);
 
 
 
