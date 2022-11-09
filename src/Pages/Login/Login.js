@@ -8,7 +8,7 @@ import { GoogleAuthProvider } from 'firebase/auth';
 
 const Login = () => {
 
-    const {logIn,  googleLogin} = useContext(AuthContext);
+    const {emailLogIn,  googleLogin} = useContext(AuthContext);
     const location = useLocation();
     const navigate = useNavigate();
 
@@ -20,14 +20,15 @@ const Login = () => {
         const form = event.target;
         const email = form.email.value;
         const password = form.password.value;
-        logIn(email, password)
+        console.log(email, password)
+        emailLogIn(email, password)
         .then(result => {
             const user = result.user;
             console.log(user);
             navigate(from, {replace: true});
 
         })
-        .then(error => console.error(error));
+        .catch(error => console.error(error));
     }
     const googleProvider = new GoogleAuthProvider()
     const handleGoogleSignIn = () =>{
