@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const ServiceCard = ({service}) => {
-    const {_id, image_url, price, title} = service;
+    const {_id, image_url, price, title, description } = service;
     // console.log(img, price , title);
     return (
         <div className="card w-96 bg-base-100 shadow-xl">
@@ -12,15 +12,19 @@ const ServiceCard = ({service}) => {
                     {title}
                     <div className="badge badge-secondary">NEW</div>
                 </h2>
-                <p className='2xl text-red-500 font-semibold'>$ {price}</p>
+                <p className='2xl text-red-500 font-semibold'>Price: $ {price}</p>
                 <div className="card-actions justify-end">
-                    <Link to={`/checkout/${_id}`}>
+            
+                    {
+                      description.length > 150 ?
+                      <p>{description.slice(0, 150) + '...'}<Link to={`/checkout/${_id}`}><button className="btn btn-success">See Details</button></Link></p>
+                      :
+                      <p>{description}</p> 
 
-                      <div className="badge badge-outline">details view</div>
-                    </Link>
-                    
-                    {/* <div className="badge badge-outline">Products</div> */}
-                </div>
+                      }
+                
+                 </div>
+            
             </div>
         </div>
     );

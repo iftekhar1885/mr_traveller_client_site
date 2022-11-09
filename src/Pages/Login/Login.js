@@ -1,13 +1,18 @@
 import React, { useContext } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import  login from '../../assets/login2-pic.webp';
 import { FaGoogle } from 'react-icons/fa';
 import { AuthContext } from '../../context/AuthProvider/AuthProvider';
+import { GoogleAuthProvider } from 'firebase/auth';
 
 
 const Login = () => {
 
-    const {logIn} = useContext(AuthContext);
+    const {logIn,  googleLogin} = useContext(AuthContext);
+    const location = useLocation();
+    const navigate = useNavigate();
+
+    const from = location.state?.from?.pathname || '/';
 
 
     const handleLogin = event =>{
@@ -19,9 +24,20 @@ const Login = () => {
         .then(result => {
             const user = result.user;
             console.log(user);
+            navigate(from, {replace: true});
 
         })
         .then(error => console.error(error));
+    }
+    const googleProvider = new GoogleAuthProvider()
+    const handleGoogleSignIn = () =>{
+      googleLogin(googleProvider)
+      .then(result =>{
+        const user = result.user;
+        console.log(user);
+      })
+      .catch(error => console.error(error))
+
     }
     return (
         <div className="hero w-full my-20">
@@ -56,7 +72,7 @@ const Login = () => {
 
             <p className='text-center'>New to Mr Traveller <Link className='text-orange-600 font-bold' to='/signin'> Sign In</Link></p>
 
-            <button className="btn btn-secondary m-5">
+            <button onClick={handleGoogleSignIn} className="btn btn-secondary m-5">
                 <FaGoogle className='m-3'></FaGoogle>Google SignUp</button>
           </div>
         </div>
