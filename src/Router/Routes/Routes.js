@@ -4,6 +4,7 @@ import Blog from "../../Pages/Blog/Blog";
 import CheckOut from "../../Pages/CheckOut/CheckOut";
 import Home from "../../Pages/Homes/Home/Home";
 import Login from "../../Pages/Login/Login";
+import MoreService from "../../Pages/MoreService/MoreService";
 import Reviews from "../../Pages/review/Reviews";
 import SignIn from "../../Pages/signIn/SignIn";
 import PrivateRoute from "../PrivateRoute/PrivateRoute";
@@ -39,6 +40,10 @@ const router = createBrowserRouter([
         {
           path:'/blog',
           element:<Blog></Blog>
+        },
+        {
+          path:'/moreservice',
+          element:<MoreService></MoreService>
         },
       ]
 

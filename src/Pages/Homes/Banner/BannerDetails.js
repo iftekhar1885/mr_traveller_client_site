@@ -1,5 +1,4 @@
 import React from 'react';
-
 const BannerDetails = ({slide}) => {
     const {image, id, prev, next} = slide;
     return (

@@ -1,5 +1,4 @@
 import React from 'react';
-import './Banner.css';
 import img1 from '../../../assets/pic-4.webp';
 import img2 from '../../../assets/pic-10.jpeg';
 import img3 from '../../../assets/pic-3.jpg';
