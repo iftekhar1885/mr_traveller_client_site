@@ -3,7 +3,7 @@ import { useLoaderData } from 'react-router-dom';
 import { AuthContext } from '../../context/AuthProvider/AuthProvider';
 
 const CheckOut = () => {
-    const {_id, title, price, description} = useLoaderData();
+    const {_id, title,image_url, price, description} = useLoaderData();
     const {user} = useContext(AuthContext);
 
     const handleReviewOrder = event =>{
@@ -49,7 +49,7 @@ const CheckOut = () => {
              <div>
                 <h2 className='text-5xl text-bold text-center'>This Is Details Part</h2>
               <diV className='border border-red-200 p-3 m-10 shadow-lg rounded-lg bg-yellow-500'>
-
+                <figure><img className='w-full h-3/4' src={image_url} alt="" /></figure>
                  <h2 className='text-4xl m-3 text-center text-bold'>{title}</h2>
                   <h4 className='text-2xl m-3 text-center text-bold'>price:$ {price}</h4>
                   <p className='text-semibold m-10'>{description}</p>
