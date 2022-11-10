@@ -1,5 +1,6 @@
 import { createBrowserRouter } from "react-router-dom";
 import Main from "../../Layout/Main";
+import AddServices from "../../Pages/AddServices/AddServices";
 import Blog from "../../Pages/Blog/Blog";
 import CheckOut from "../../Pages/CheckOut/CheckOut";
 import Home from "../../Pages/Homes/Home/Home";
@@ -12,42 +13,46 @@ import PrivateRoute from "../PrivateRoute/PrivateRoute";
 
 
 const router = createBrowserRouter([
-    {
-      path: '/',
-      element: <Main></Main>,
-      children:[
-        {
-            path: '/',
-            element: <Home></Home>
-        },
-        {
-          path: '/login',
-          element:<Login></Login>
-        },
-        {
-          path: '/signin',
-          element:<SignIn></SignIn>
-        },
-        {
-          path: 'checkout/:id',
-          element: <PrivateRoute><CheckOut></CheckOut></PrivateRoute>,
-          loader: ({params}) => fetch(`http://localhost:5000/services/${params.id}`)
-        },
-        {
-          path:'/reviews',
-          element: <PrivateRoute><Reviews></Reviews></PrivateRoute>,
-        },
-        {
-          path:'/blog',
-          element:<Blog></Blog>
-        },
-        {
-          path:'/moreservice',
-          element:<MoreService></MoreService>
-        },
-      ]
+  {
+    path: '/',
+    element: <Main></Main>,
+    children: [
+      {
+        path: '/',
+        element: <Home></Home>
+      },
+      {
+        path: '/login',
+        element: <Login></Login>
+      },
+      {
+        path: '/signin',
+        element: <SignIn></SignIn>
+      },
+      {
+        path: 'checkout/:id',
+        element: <PrivateRoute><CheckOut></CheckOut></PrivateRoute>,
+        loader: ({ params }) => fetch(`https://mr-traveller-server-two.vercel.app/services/${params.id}`)
+      },
+      {
+        path: '/reviews',
+        element: <PrivateRoute><Reviews></Reviews></PrivateRoute>,
+      },
+      {
+        path: '/blog',
+        element: <Blog></Blog>
+      },
+      {
+        path: '/moreservice',
+        element: <MoreService></MoreService>
+      },
+      {
+        path: '/addservice',
+        element: <AddServices></AddServices>,
+      },
+    ]
 
-    }
-  ]);
+  }
+]);
 
-  export default router;
+export default router;

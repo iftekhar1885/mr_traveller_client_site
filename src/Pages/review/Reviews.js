@@ -13,14 +13,14 @@ const Reviews = () => {
   useEffect(() => {
     if (!user?.email)
       return;
-    fetch(`http://localhost:5000/reviews?email=${user?.email}`, {
+    fetch(`https://mr-traveller-server-two.vercel.app/reviews?email=${user?.email}`, {
       headers: {
         authorization: `Bearer ${localStorage.getItem('token')}`
       }
     })
 
       .then(res => {
-        if(res.status === 401 || res.status === 403){
+        if (res.status === 401 || res.status === 403) {
           logOut();
         }
         return res.json()
@@ -31,7 +31,7 @@ const Reviews = () => {
   const handleDeleted = id => {
     const proceed = window.confirm('Are you sure , You want to sure cancel review');
     if (proceed) {
-      fetch(`http://localhost:5000/reviews/${id}`, {
+      fetch(`https://mr-traveller-server-two.vercel.app/reviews/${id}`, {
         method: 'DELETE'
 
       })
@@ -51,7 +51,7 @@ const Reviews = () => {
   }
 
   const handleUpdate = id => {
-    fetch(`http://localhost:5000/reviews/${id}`, {
+    fetch(`https://mr-traveller-server-two.vercel.app/reviews/${id}`, {
       method: 'PATCH',
       headers: {
         'content-type': 'application/json'

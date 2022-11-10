@@ -20,7 +20,8 @@ const Header = () => {
        {
          user?.email ?
          <>
-           <li><Link className='font-semi-bold' to='/reviews'>Reviews</Link></li>
+           <li><Link className='font-semi-bold' to='/reviews'>My Reviews</Link></li>
+           <li><Link className='font-semi-bold' to='/addservice'>Add Service</Link></li>
            <li><p className='font-semi-bold'>{user?.displayName}</p></li>
            <li><p>
             {user.photoURL ?
