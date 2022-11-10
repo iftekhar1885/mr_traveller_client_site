@@ -49,7 +49,8 @@ const Reviews = () => {
     }
 
   }
-
+          
+     
   const handleUpdate = id => {
     fetch(`https://mr-traveller-server-two.vercel.app/reviews/${id}`, {
       method: 'PATCH',

@@ -62,7 +62,7 @@ const CheckOut = () => {
                         <input name='lastName' type="text" placeholder="Last Name" className="input input-bordered w-full" />
                         <input name='phone' type="text" placeholder="Your Phone" className="input input-bordered w-full" required />
                         <input name='email' type="text" placeholder="Your email" defaultValue={user?.email} className="input input-bordered w-full" />
-                        <textarea name='message' className="textarea textarea-bordered w-full shadow-lg rounded-lg p-14  m-6" placeholder="Your message" required></textarea>
+                        <textarea name='message' className="textarea textarea-bordered w-full shadow-lg rounded-lg p-10  m-6" placeholder="Your message" required></textarea>
                         <br />
                         <input className='btn m-3' type='submit' value='Please added a new review'></input>
                     </div>

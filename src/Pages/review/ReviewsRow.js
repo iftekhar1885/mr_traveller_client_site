@@ -13,6 +13,7 @@ const ReviewsRow = ({ review, handleDeleted, handleUpdate }) => {
 
 
     }, [service])
+    
 
 
     return (

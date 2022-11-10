@@ -1,9 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 const ServiceDetails = ({addDetail}) => {
+    const [addService, setAddService] = useState([])
     const { _id, image, customer, price, details} = addDetail;
 
     const handleDelete = id =>{
+
         const proceed = window.confirm('Are you sure, you want to delete this service')
         if(proceed){
             fetch(`https://mr-traveller-server-two.vercel.app/addservices/${id}`, {
@@ -13,6 +15,11 @@ const ServiceDetails = ({addDetail}) => {
             .then(res => res.json())
             .then(data =>{
                 console.log(data);
+                if(data.deletedCount > 0){
+                    alert('deleted successfully');
+                    const remaining = addService.filter(details => details._id !== id);
+                    setAddService(remaining);
+                }
             })
         }
 

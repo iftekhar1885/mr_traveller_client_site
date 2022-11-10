@@ -52,9 +52,8 @@ const AddServices = () => {
         <div>
             <h2 className='text-5xl text-center m-10'> Please add a New Service</h2>
 
-            {/* <h2 className='text-5xl text-center m-10'> {title}</h2> */}
-            <form onSubmit={handleAddService}>
-                <div className='grid gap-4 m-10 shadow-lg rounded-lg p-10 mb-0 bg-violet-400 w-2/3'>
+            <form className='grid justify-items-center' onSubmit={handleAddService}>
+                <div className='grid justify-items-center gap-4 m-10 shadow-lg rounded-lg p-5 mb-0 bg-yellow-400 w-1/4'>
                     <label className="label">
                         <span className="label-text">Service Name</span>
                     </label>
@@ -70,7 +69,7 @@ const AddServices = () => {
                     <label className="label">
                         <span className="label-text">Service Price</span>
                     </label>
-                    <input name='number' type="text" placeholder="" className="input input-bordered w-1/3" />
+                    <input name='number' type="text" placeholder="price" className="input input-bordered w-1/2" />
                     <label className="label">
                         <span className="label-text">About Service</span>
                     </label>
