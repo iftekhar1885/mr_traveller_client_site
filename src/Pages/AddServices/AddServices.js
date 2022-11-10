@@ -82,7 +82,7 @@ const AddServices = () => {
 
             </form>
 
-            <AddServiceDetails></AddServiceDetails>
+        
         </div>
 
     );
