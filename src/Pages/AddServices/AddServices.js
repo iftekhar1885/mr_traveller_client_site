@@ -1,8 +1,11 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { AuthContext } from '../../context/AuthProvider/AuthProvider';
+import AddServiceDetails from '../AddServiceDetails/AddServiceDetails';
+
 // import { useLoaderData } from 'react-router-dom';
 
 const AddServices = () => {
-    //    const {title} = useLoaderData(); 
+    const {user} = useContext(AuthContext);
 
     const handleAddService = event => {
         event.preventDefault();
@@ -11,6 +14,7 @@ const AddServices = () => {
         const photoURL = form.photoURL.value;
         const price = form.number.value;
         const message = form.message.value;
+        const email = form.email.value;
         console.log(name, price, photoURL, message)
 
         const review = {
@@ -19,10 +23,11 @@ const AddServices = () => {
             image : photoURL, 
             price : price,
             details: message,
+            email:email,
 
         }
 
-        fetch('https://mr-traveller-server-two.vercel.app/services', {
+        fetch('https://mr-traveller-server-two.vercel.app/addservices', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -46,17 +51,22 @@ const AddServices = () => {
     return (
         <div>
             <h2 className='text-5xl text-center m-10'> Please add a New Service</h2>
+
             {/* <h2 className='text-5xl text-center m-10'> {title}</h2> */}
             <form onSubmit={handleAddService}>
-                <div className='grid gap-4 m-10 shadow-lg rounded-lg p-14 mb-0 bg-violet-400'>
+                <div className='grid gap-4 m-10 shadow-lg rounded-lg p-10 mb-0 bg-violet-400 w-2/3'>
                     <label className="label">
                         <span className="label-text">Service Name</span>
                     </label>
                     <input name='name' type="text" placeholder="service Name" className="input input-bordered w-1/2" />
                     <label className="label">
+                        <span className="label-text">Email</span>
+                    </label>
+                    <input name='email' type="text" placeholder="Your email" defaultValue={user?.email} className="input input-bordered w-1/2" />
+                    <label className="label">
                         <span className="label-text">Service Image URl</span>
                     </label>
-                    <input name='photoURL' type="text" placeholder="Your Phone" className="input input-bordered w-1/2" required />
+                    <input name='photoURL' type="text" placeholder="Your photo url" className="input input-bordered w-1/2" required />
                     <label className="label">
                         <span className="label-text">Service Price</span>
                     </label>
@@ -71,6 +81,8 @@ const AddServices = () => {
 
 
             </form>
+
+            <AddServiceDetails></AddServiceDetails>
         </div>
 
     );
